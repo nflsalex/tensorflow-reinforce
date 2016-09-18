@@ -147,6 +147,7 @@ class PolicyGradientREINFORCE(object):
       return e / np.sum(e)
 
     # epsilon-greedy exploration strategy
+    print("exploration %f" % self.exploration )
     if random.random() < self.exploration:
       return random.randint(0, self.num_actions-1)
     else:
